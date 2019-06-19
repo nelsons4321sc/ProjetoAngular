@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  funcionarios = [];
+  //chamado pelo app.component.html
+  aoAdicionar(objFuncCard){
+    this.funcionarios.push(objFuncCard);
+
+  }
+
+ /* 
+  idade = 27;
+  
+  getIdade() {
+    return this.idade;
+  }
+ 
+  alterarNome(event: any){
+  this.nome = event.target.value;  
+  }
+  */
 }
+

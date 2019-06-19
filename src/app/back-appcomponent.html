@@ -1,0 +1,57 @@
+<div class="jumbotron">
+    <h1 class="display-3">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+  </div>
+
+  <!--<div class="container">
+
+
+  <div class="jumbotron">
+    <h1 class="display-3">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+  </div>
+
+  </div>-->
+
+
+
+  <div class="container">
+    <!--Vamos fazer na linha abaixo um bind de eventos customizados
+    que terá o mesmo nome que está na propriedade do componente:funcionario-form.components.ts
+    para que o mesmo possa ser visto aqui e ele chame um método(aoAdicionar()) do app.component.ts
+    PROCESSO:
+    -Quando um funcionário for adicionado(através do click - funcionario-form.component.html);
+    -Dispara um evento;
+    -Que esse evento seja escutado pelo componente - app-funcionario-form;
+    -Que por sua vez, em seguuida chame o metodo - aoAdicionar()(app.component.ts).
+    O QUE É E O QUE VEM DENTRO DO $EVENT:
+    - É o parametro do evento;
+    - Vem o que é passado no emit(funcionario.form.component.ts)
+    - O que estiver no emit, é retornado
+    - Como foi o objeto funcionario, é esse que será retornado-->
+    <app-funcionario-form (criado)="aoAdicionar($event)"></app-funcionario-form>
+
+      <!--<h1>Meu nome é {{nome}}</h1>
+      <h2>Minha idade é {{ 20 + getIdade()}}</h2>-->
+
+       <div class="row" style="margin-top: 20px">
+
+          <div class="col-2" *ngFor="let f of funcionarios">
+            <!--na linha abaixo está um bind property -->
+            <app-funcionario-card [funcionario] = "f"></app-funcionario-card>
+          </div>
+
+       </div>
+
+
+  </div>
